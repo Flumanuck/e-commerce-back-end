@@ -67,6 +67,9 @@ router.put("/:id", (req, res) => {
       id: req.params.id,
     },
   })
+    .then(() =>
+      res.status(200).json(`Product id ${req.params.id} has been updated`)
+    )
     .then((product) => {
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
@@ -96,7 +99,7 @@ router.put("/:id", (req, res) => {
     })
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
 });
