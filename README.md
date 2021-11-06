@@ -40,5 +40,6 @@ From the command line, run "npm i" to install the needed dependencies.
   | DELETE | /api/categories/:id | Deletes category with matching id     | n/a                        |
 
 ## Screenshot
+![screenshot of insomnia data](https://github.com/Flumanuck/e-commerce-back-end/blob/main/Screenshot.PNG?raw=true)
 
 ## Video-Example
